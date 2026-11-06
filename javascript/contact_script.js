@@ -12,6 +12,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const confirmationDiv = document.getElementById("confirmationMessage");
     confirmationDiv.textContent = message;
-    confirmationDiv.style.display = "flex";
   });
 });

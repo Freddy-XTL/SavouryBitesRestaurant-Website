@@ -1,0 +1,420 @@
+/* =========================================================
+   SAVOURY BITES — STYLE.CSS
+   =========================================================
+   TABLE OF CONTENTS
+   1. Global / Base Styles ......... (all pages)
+   2. Navigation Bar ............... (all pages)
+   3. Footer ....................... (all pages)
+   4. Home Page .................... (index.html)
+   5. Menu Page .................... (Menu.html)
+   6. Specials Page ................ (Specials.html)
+   7. Contact Page ................. (Contact.html)
+   8. Responsive Design
+      8.1 Tablet & smaller (max-width: 900px)
+      8.2 Mobile (max-width: 500px)
+   ========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL / BASE STYLES  (all pages)
+   ========================================================= */
+body {
+    font-family: "Concert One", sans-serif;
+    margin: 0;
+    background-color: rgb(255, 218, 170);
+}
+
+
+/* =========================================================
+   2. NAVIGATION BAR  (all pages)
+   ========================================================= */
+nav {
+    background-color: rgb(228, 157, 105);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav img {
+    width: 90px;
+    height: 90px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+
+/* =========================================================
+   3. FOOTER  (all pages)
+   ========================================================= */
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   4. HOME PAGE  (index.html)
+   ========================================================= */
+
+/* --- Hero banner --- */
+.hero-background-container {
+    background-image: url("../images/StockCake-Cozy_Cafe_Scene_1760616620.jpg");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+/* Dark overlay so the white heading stays readable */
+.hero-background-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin: 0 20px;
+}
+
+/* --- Intro text block --- */
+.intro-info {
+    text-align: center;
+    padding: 30px 20px 60px 20px;
+}
+
+.intro-info p {
+    margin: 0 auto;
+    max-width: 900px; /* prevents overflow on mobile */
+}
+
+
+/* =========================================================
+   5. MENU PAGE  (Menu.html)
+   ========================================================= */
+
+/* --- Section headings / intro text --- */
+.menu-info {
+    text-align: center;
+    padding: 30px 20px 60px 20px;
+}
+
+.menu-info p {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* --- Dish rows (main dishes + desserts) --- */
+.main-dishes,
+.dessert-dishes {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* allows stacking on small screens */
+    margin: 0 auto 20px auto;
+}
+
+/* --- Individual dish cards --- */
+.main-dish-option,
+.dessert-dish-option {
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    width: 550px;
+    height: 600px;
+    flex-shrink: 0; /* keeps size fixed on desktop */
+}
+
+.main-dish-option img,
+.dessert-dish-option img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   6. SPECIALS PAGE  (Specials.html)
+   ========================================================= */
+
+/* --- Section headings / intro text --- */
+.specials-info {
+    text-align: center;
+    padding: 30px 20px 60px 20px;
+}
+
+.specials-info p {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* --- Special dish rows --- */
+.special-dishes,
+.special-limited-dish {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* allows cards to move to next line */
+    margin: 0 auto 20px auto;
+}
+
+/* --- Dish cards --- */
+.special-dish-option,
+.limited-dish-option {
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    flex-shrink: 0; /* keeps size fixed unless mobile */
+}
+
+/* Normal discounted specials */
+.special-dish-option {
+    width: 550px;
+    height: 700px;
+}
+
+.special-dish-option img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* Large "Limited Time Special" card */
+.limited-dish-option {
+    width: 650px;
+    height: 700px;
+}
+
+.limited-dish-option img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   7. CONTACT PAGE  (Contact.html)
+   ========================================================= */
+
+/* Page heading (only Contact has an <h1> as a direct child of <main>) */
+main > h1 {
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+}
+
+/* --- Reservation form --- */
+#reservationForm {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+#reservationForm fieldset {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 40px 25px 40px 25px;
+    background-color: antiquewhite;
+}
+
+#reservationForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+#reservationForm input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+#reservationForm input[type="submit"] {
+    width: auto;
+    margin-top: 50px;
+    padding: 20px 130px;
+    background-color: rgb(228, 157, 105);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reservationForm input[type="submit"]:hover {
+    background-color: black;
+}
+
+/* --- Message shown by contact_script.js after submitting --- */
+#confirmationMessage {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: green;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Contact details (address / email / phone) --- */
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px 60px 20px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   8. RESPONSIVE DESIGN
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   8.1 Tablet & smaller  (max-width: 900px)
+   --------------------------------------------------------- */
+@media (max-width: 900px) {
+
+    /* Navigation (all pages) */
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+    /* Home page */
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .intro-info p {
+        max-width: 90%;
+    }
+
+    /* Menu page */
+    .main-dishes,
+    .dessert-dishes {
+        gap: 20px; /* smaller gaps for mobile */
+    }
+
+    .main-dish-option,
+    .dessert-dish-option {
+        width: 90%;   /* almost full width */
+        height: auto; /* adjusts height automatically */
+    }
+
+    .main-dish-option img,
+    .dessert-dish-option img {
+        width: 100%;  /* image fills card width */
+        height: auto; /* keeps aspect ratio */
+    }
+
+    /* Specials page */
+    .special-dishes,
+    .special-limited-dish {
+        gap: 20px;
+    }
+
+    .special-dish-option,
+    .limited-dish-option {
+        width: 90%;   /* almost full width of the screen */
+        height: auto; /* height adjusts automatically */
+    }
+
+    .special-dish-option img,
+    .limited-dish-option img {
+        width: 100%;  /* image fills card width */
+        height: auto; /* keeps aspect ratio */
+    }
+}
+
+/* ---------------------------------------------------------
+   8.2 Mobile  (max-width: 500px)
+   --------------------------------------------------------- */
+@media (max-width: 500px) {
+
+    /* Navigation (all pages) */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    /* Home page */
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .intro-info p {
+        padding: 0 10px;
+    }
+
+    /* Menu page */
+    .menu-info p {
+        padding: 0 10px;
+    }
+
+    /* Specials page */
+    .specials-info p {
+        padding: 0 10px;
+    }
+
+    /* Contact page */
+    #reservationForm fieldset {
+        padding: 15px;
+    }
+}
