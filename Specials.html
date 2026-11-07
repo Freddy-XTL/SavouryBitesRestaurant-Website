@@ -1,91 +1,181 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savoury Bites</title>
+    <title>Our Specials | Savoury Bites</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Bungee&family=Concert+One&family=Oswald:wght@200..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
     <header>
         <nav>
-            <img src="images/Savoury bites logo.png" alt="Savory-bites-logo">
+            <a href="index.html" class="logo">
+                <img src="images/Savoury bites logo.png" alt="Savoury Bites Restaurant">
+            </a>
+
             <div class="nav-links">
-                <a href="index.html" target="_self">Home</a>
-                <a href="Menu.html" target="_self">Menu</a>
-                <a href="Specials.html" target="_self">Specials</a>
-                <a href="Contact.html" target="_self">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="Menu.html">Menu</a>
+                <a href="Specials.html" class="active">Specials</a>
+                <a href="Contact.html">Contact</a>
             </div>
-            
+
+            <a href="Contact.html" class="nav-button">Book a Table</a>
         </nav>
     </header>
 
     <main>
-        <div class="specials-info">
-            <h1>Specials</h1>
+
+        <section class="hero">
+            <div class="hero-background-container-specials">
+                <div class="hero-content">
+                    <span class="hero-subtitle">-- LIMITED TIME ONLY --</span>
+
+                    <h1>Our Specials</h1>
+
+                    <p>Delicious deals. Unforgettable taste.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="specials-info">
+            <span class="section-label-specials">Featured Specials</span>
+
+            <h1>DON'T MISS OUT</h1>
 
             <p>
-                Our discounted specials are till this October 26th! Get it while special lasts!
+                Enjoy some of your favourite dishes at special prices.
+                These offers are available for a limited time only!
             </p>
-        </div>
+        </section>
 
-        <div class="special-dishes">
+        <section class="special-dishes">
+
             <div class="special-dish-option">
-                <h3>Name: Butter Chicken with Garlic Naan</h3>
-                <p>A creamy, spiced Indian classic.</p>
-                <p>Was: <s>R130</s></p>
-                <p>Now: <em>R110</em></p>
-                <img src="images/butter-chicken-with-garlic-naan-and-cilantro-basmati-rice.jpg" alt="">
+
+                <div class="discount-badge">10% OFF</div>
+
+                <img src="images/butter-chicken-with-garlic-naan-and-cilantro-basmati-rice.jpg"
+                     alt="Butter Chicken with Garlic Naan">
+
+                <div class="dish-content">
+                    <h2>Butter Chicken with Garlic Naan</h2>
+
+                    <p>A creamy, spiced Indian classic served with warm garlic naan.</p>
+
+                    <div class="price-container">
+                        <span class="original-price">R130</span>
+                        <span class="discounted-price">R117</span>
+                    </div>
+                </div>
+
             </div>
 
             <div class="special-dish-option">
-                <h3>Name: Chocolate Lava Cake</h3>
-                <p>Rich chocolate cake with molten center</p>
-                <p>Was: <s>R70</s></p>
-                <p>Now: <em>R60</em></p>
-                <img src="images/chocolate-lava-cake.webp" alt="">
+
+                <div class="discount-badge">10% OFF</div>
+
+                <img src="images/chocolate-lava-cake.webp"
+                     alt="Chocolate Lava Cake">
+
+                <div class="dish-content">
+                    <h2>Chocolate Lava Cake</h2>
+
+                    <p>Rich chocolate cake with a warm, molten centre.</p>
+
+                    <div class="price-container">
+                        <span class="original-price">R70</span>
+                        <span class="discounted-price">R63</span>
+                    </div>
+                </div>
+
             </div>
 
             <div class="special-dish-option">
-                <h3>Name: Mushroom Stroganoff</h3>
-                <p>Earthy mushrooms in a creamy sauce served over noodles.</p>
-                <p>Was: <s>R120</s></p>
-                <p>Now: <em>R100</em></p>
-                <img src="images/Mushroom Stroganoff.webp" alt="">
+
+                <div class="discount-badge">10% OFF</div>
+
+                <img src="images/Mushroom Stroganoff.webp"
+                     alt="Mushroom Stroganoff">
+
+                <div class="dish-content">
+                    <h2>Mushroom Stroganoff</h2>
+
+                    <p>Earthy mushrooms in a creamy sauce served over noodles.</p>
+
+                    <div class="price-container">
+                        <span class="original-price">R120</span>
+                        <span class="discounted-price">R108</span>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
+        </section>
 
-        <div class="specials-info">
-            <h1>Limited Time Special!!</h1>
-        </div>
+        <section class="specials-info">
+            <span class="section-label-specials">Chef's Recommendation</span>
 
-        <div class="special-limited-dish">
+            <h1>LIMITED TIME SPECIAL</h1>
+
+            <p>
+                Discover something extra special from our kitchen.
+                A delicious seasonal dish made to warm your evenings.
+            </p>
+        </section>
+
+        <section class="special-limited-dish">
+
             <div class="limited-dish-option">
-                <h3>Name: Smoked Paprika Lamb Shank</h3>
-                <p>
-                    Slow-braised lamb shank infused with smoked paprika,
-                    garlic, and rosemary, served over creamy butternut
-                    mash with a drizzle of red wine reduction.
-                </p>
 
-                <p>
-                    Only for the month of October. Warm, bold, and perfect
-                    for cooler evenings.
-                </p>
-                <p> <strong>R165</strong></p>
-                <img src="images/Lamb Shanks.jpg" alt="">
+                <img src="images/Lamb Shanks.jpg"
+                     alt="Smoked Paprika Lamb Shank">
+
+                <div class="dish-content">
+                    <h2>Smoked Paprika Lamb Shank</h2>
+
+                    <p>
+                        Slow-braised lamb shank infused with smoked paprika,
+                        garlic, and rosemary, served over creamy butternut
+                        mash with a drizzle of red wine reduction.
+                    </p>
+
+                    <p>
+                        Only available for a limited time. Warm, bold,
+                        and perfect for cooler evenings.
+                    </p>
+
+                    <h3>R165</h3>
+                </div>
+
             </div>
 
-        </div>
-        
+        </section>
+
+        <section class="menu-cta">
+            <h2>Hungry for more?</h2>
+
+            <p>
+                Explore our full menu and discover more delicious dishes
+                prepared with care.
+            </p>
+
+            <a href="Menu.html" class="primary-button">Explore Our Menu</a>
+        </section>
+
     </main>
 
     <footer>
         &copy; Savoury Bites | All Rights Reserved
     </footer>
+
 </body>
 </html>

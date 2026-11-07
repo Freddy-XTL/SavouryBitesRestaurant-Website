@@ -136,8 +136,10 @@ nav {
 footer {
     background-color: #09110b;
     color: var(--cream);
-    padding: 55px 6% 20px;
+    padding: 25px 6%;
     border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 13px;
 }
 
 .footer-content {
@@ -331,9 +333,10 @@ footer {
             rgba(7, 16, 9, 0.95),
             rgba(7, 16, 9, 0.72)
         ),
-        url("../images/StockCake-Cozy_Cafe_Scene_1760616620.jpg");
+        url("../images/internationals-people-sitting-table-with-salads-cocktails.jpg");
+
     background-size: cover;
-    background-position: center;
+    background-position: 25% 40%;
     display: flex;
     align-items: center;
     padding: 65px 8%;
@@ -357,9 +360,6 @@ footer {
 
 /* Menu page */
 
-
-/* Menu page additions */
-
 .menu-category {
     padding: 20px 0 55px;
 }
@@ -379,40 +379,6 @@ footer {
 .category-heading p {
     color: var(--text-muted);
     margin: 0;
-}
-
-.main-dish-option,
-.dessert-dish-option {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.dish-content {
-    padding: 0 18px 15px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.dish-content h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-    color: var(--cream);
-    margin: 16px 0 8px;
-}
-
-.dish-content p {
-    color: var(--text-muted);
-    font-size: 14px;
-    margin: 0 0 15px;
-}
-
-.dish-content h3 {
-    color: var(--gold-light);
-    font-size: 20px;
-    margin: auto 0 0;
-    padding-top: 10px;
 }
 
 .desserts-section {
@@ -439,21 +405,7 @@ footer {
     margin: 0 auto 25px;
 }
 
-@media (max-width: 600px) {
-
-    .category-heading h2 {
-        font-size: 30px;
-    }
-
-    .menu-cta h2 {
-        font-size: 28px;
-    }
-
-    .dish-content {
-        padding: 0 16px 18px;
-    }
-}
-
+/* Menu and Specials information */
 
 .menu-info,
 .specials-info {
@@ -466,6 +418,7 @@ footer {
 main > h1 {
     font-size: clamp(32px, 4vw, 46px);
     color: var(--cream);
+    margin: 15px 0;
 }
 
 .menu-info p,
@@ -474,6 +427,8 @@ main > h1 {
     margin: auto;
     color: var(--text-muted);
 }
+
+/* Dish layouts */
 
 .main-dishes,
 .dessert-dishes,
@@ -572,6 +527,155 @@ main > h1 {
 .limited-dish-option h3 {
     color: var(--gold-light);
     margin: 10px 0 20px;
+}
+
+/* Menu card content */
+
+.main-dish-option,
+.dessert-dish-option {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.dish-content {
+    padding: 0 18px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.dish-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: var(--cream);
+    margin: 16px 0 8px;
+}
+
+.dish-content p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 15px;
+}
+
+.dish-content h3 {
+    color: var(--gold-light);
+    font-size: 20px;
+    margin: auto 0 0;
+    padding-top: 10px;
+}
+
+/* Specials page */
+
+.hero-background-container-specials {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(7, 16, 9, 0.94) 0%,
+            rgba(7, 16, 9, 0.78) 42%,
+            rgba(7, 16, 9, 0.12) 100%
+        ),
+        url("../images/Restaurant-2.0-Dining-Out-1536x864.jpg.webp");
+
+    min-height: 370px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+}
+
+.section-label-specials {
+    display: inline-block;
+    color: var(--gold-light);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+/* Discount badges */
+
+.special-dish-option {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--gold);
+    color: #17130e;
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+/* Special dish content */
+
+.special-dish-option .dish-content {
+    padding: 0 18px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.special-dish-option .dish-content h2 {
+    font-size: 20px;
+    margin: 16px 0 8px;
+}
+
+.special-dish-option .dish-content p {
+    padding: 0;
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.original-price {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    font-size: 15px;
+}
+
+.discounted-price {
+    color: var(--gold-light);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+/* Limited-time special */
+
+.limited-dish-option {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.limited-dish-option .dish-content {
+    padding: 0 25px 20px;
+}
+
+.limited-dish-option .dish-content h2 {
+    margin-top: 20px;
+}
+
+.limited-dish-option .dish-content p {
+    padding: 0;
 }
 
 /* Contact page */
@@ -690,6 +794,11 @@ main > h1 {
         padding: 60px 6%;
     }
 
+    .hero-background-container-specials {
+        min-height: 350px;
+        padding: 60px 6%;
+    }
+
     .features {
         padding: 40px 3%;
         gap: 15px;
@@ -736,6 +845,12 @@ main > h1 {
         min-height: 480px;
         padding: 45px 7%;
         background-position: 60% center;
+    }
+
+    .hero-background-container-specials {
+        min-height: 330px;
+        padding: 45px 7%;
+        background-position: center;
     }
 
     .hero-content h1 {
@@ -813,6 +928,30 @@ main > h1 {
     .special-dish-option img,
     .limited-dish-option img {
         height: 230px;
+    }
+
+    .category-heading h2 {
+        font-size: 30px;
+    }
+
+    .menu-cta h2 {
+        font-size: 28px;
+    }
+
+    .dish-content {
+        padding: 0 16px 18px;
+    }
+
+    .special-dish-option .dish-content {
+        padding: 0 16px 18px;
+    }
+
+    .limited-dish-option .dish-content {
+        padding: 0 18px 20px;
+    }
+
+    .price-container {
+        padding-bottom: 5px;
     }
 
     #reservationForm fieldset {
