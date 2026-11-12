@@ -798,12 +798,17 @@ main > h1 {
     visibility: visible;
 }
 
+.popup-overlay .popup-box h2 {
+    color: white;
+}
+
 .popup-box {
     position: relative;
-    background: #FFFFFF;
+    background: #101B13;
     width: 90%;
     max-width: 420px;
     padding: 40px 20px;
+    border: 1px #E0AA63;
     border-radius: 15px;
     text-align: center;
     transform: translateY(20px);
