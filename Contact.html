@@ -13,14 +13,18 @@
 <body>
     <header>
         <nav>
-            <img src="images/Savoury bites logo.png" alt="Savory-bites-logo">
+            <a href="index.html" class="logo">
+                <img src="images/Savoury Bites Restaurant Logo.png" alt="Savoury Bites Restaurant">
+            </a>
+
             <div class="nav-links">
-               <a href="index.html" target="_self">Home</a>
-                <a href="Menu.html" target="_self">Menu</a>
-                <a href="Specials.html" target="_self">Specials</a>
-                <a href="Contact.html" target="_self">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="Menu.html">Menu</a>
+                <a href="Specials.html">Specials</a>
+                <a href="Contact.html" class="active">Contact</a>
             </div>
-            
+
+            <a href="Contact.html" class="nav-button">Book a Table</a>
         </nav>
     </header>
 
@@ -43,7 +47,7 @@
                 <br>
                 <br>
                 <label for="Guests">Number of guests</label>
-                <input type="number" id="Guests" name="Guests" required>
+                <input type="number" id="Guests" name="Guests" min="1" step="1" required>
                 <div class="submit-btn">
                     <input type="submit" value="Submit">
                 </div>
@@ -52,27 +56,76 @@
             <br>
         </form>
 
-        <div id="confirmationMessage"></div>
-
 
         <div class="contact-details">
             <div class="savoury-address">
-                <p> 📍 Address: 42 Olivewood Lane, Hatfield, Pretoria, 0083, South Africa</p>
+                <p> Address: 42 Olivewood Lane, Hatfield, Pretoria, 0083, South Africa</p>
             </div>
             
             <div class="savoury-email">
-                <p> 📧 Email: info@savourybites.co.za</p>
+                <p> Email: info@savourybites.co.za</p>
             </div>
             
             <div class="savoury-phone">
-                <p> 📞 Phone: +27 12 345 6789</p> 
+                <p> Phone: +27 00 000 0000</p> 
             </div>
             
         </div>
     </main>
 
+    <!-- This is for the custom popup after submission -->
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box">
+            <button class="popup-x" id="popupX">&times;</button>
+            <div class="popup-icon">✓</div>
+
+            <h2>Submission Successful!</h2>
+            <p id="confirmationMessage"></p>
+
+            <button class="popup-close" id="popupClose">
+                Close
+            </button>
+
+        </div>
+    </div>
+
     <footer>
-        &copy; Savoury Bites | All Rights Reserved
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <img src="images/Savoury Bites Restaurant Logo.png" alt="Savoury Bites">
+                <p>Good food. Warm moments.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <a href="index.html">Home</a>
+                <a href="Menu.html">Our Menu</a>
+                <a href="Specials.html">Specials</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <p>Hatfield, Pretoria</p>
+                <p>+27 00 000 0000</p>
+                <p>info@savourybites.co.za</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday – Sunday</p>
+                <p>11:00 – 22:00</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Savoury Bites. All Rights Reserved.</p>
+        </div>
+
     </footer>
 </body>
 </html>

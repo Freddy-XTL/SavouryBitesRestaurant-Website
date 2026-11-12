@@ -764,12 +764,120 @@ main > h1 {
 
 .contact-details {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 5px;
     padding: 20px 20px 70px;
     text-align: center;
     color: var(--text-muted);
+}
+
+/* For the popup overlay */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 999;
+}
+
+/* For showing the popup */
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-box {
+    position: relative;
+    background: #FFFFFF;
+    width: 90%;
+    max-width: 420px;
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+/* Animation of the popup */
+
+.popup-overlay.active .popup-box {
+    transform: translateY(0);
+}
+
+/* X Button */
+.popup-x {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    background: none;
+    border: none;
+
+    font-size: 28px;
+    color: #777;
+
+    cursor: pointer;
+}
+
+/* The Icon for success */
+
+.popup-icon {
+    width: 65px;
+    height: 65px;
+
+    background: #e3f8e8;
+    color: #28a745;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin: 0 auto 20px;
+}
+
+/* Heading */
+.popup-box h2 {
+    color: #222;
+    margin-bottom: 12px;
+}
+
+/* Description */
+.popup-box p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Close Button */
+.popup-close {
+    background: #198754;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 30px;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+.popup-close:hover {
+    background: #146c43;
 }
 
 /* Responsive design */
